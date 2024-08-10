@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Suranna&family=Tiny5&family=Whisper&display=swap" rel="stylesheet">
+<title>Portfolio</title>
+<style>
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: "Bebas Neue", sans-serif;
+}
+.navbar-custom {
+    font-family: "Kanit", sans-serif; /* Change to Kanit font */
+    font-size: 18px; /* Font size for the navbar */
+}
+.navbar-brand {
+    font-size: 24px; /* Larger font size for the brand */
+}
+.dropdown-item {
+    font-size: 16px; /* Font size for dropdown items */
+} 
+.bg-image {
+    background-image: url('picture/scott-2.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding: 0;
+    color: white;
+}
+.bg-color {
+    background-color: #9bd893;
+}
+.profile-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+h1 {
+    font-size: large;
+    animation: glow 1.5s infinite alternate;
+    font-weight: 200;
+}    
+h2 {
+    font-size: 50px;
+}
+p {
+    font-size: 50px; /* Font size for paragraph text */
+}
+footer {
+    margin-top: auto;
+    font-size: 30px; /* Font size for footer text */
+}
+.footer-icon {
+    margin-right: 10px; /* Add space between the icon and the text */
+}
+.text-white {
+    font-size: 25px; /* Font size for footer items */
+    margin-top: 2%;
+}
+.btn-big {
+    padding: 20px 50px; /* Increase padding for height and width */
+    font-size: 25px; /* Increase font size */
+}
+h5 {
+    font-size: 35px;
+    font-family: 'Kanit';
+    margin-bottom: 20px;
+}
+h6 {
+    font-size: 35px;
+    font-family: "Suranna", serif;
+}
+.qr-code {
+    max-width: 220px;
+    padding: 10px; /* Add padding around the QR code */
+    border-radius: 10px; /* Slightly round the corners */
+}
+.highlight {
+    color: #2f8d3a; /* เปลี่ยนเป็นสีที่ต้องการ */
+} 
+
+
+</style>
+</head>
+<body>
+<!-- navbar -->
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark navbar-custom"> <!-- Add navbar-custom class -->
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Portfolio.</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">About</button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="about-me.html">ข้อมูลส่วนตัว</a></li>
+                        <li><a class="dropdown-item" href="about-edu.html">ประวัติการศึกษา</a></li>
+                        <li><a class="dropdown-item" href="about-knowhow.html">ความรู้ ความสามารถ</a></li>
+                        <li><a class="dropdown-item" href="about-activities.html">กิจกรรม</a></li>
+                        <li><a class="dropdown-item" href="about-skill.html">ทักษะ</a></li>
+                        <li><a class="dropdown-item" href="about-college.html">แผนก/วิชาการ</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="ms-auto">
+        <a class="btn btn-outline-success" href="regis.php" role="button">สมัครสมาชิก</a>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- navbar -->
+<!-- บทนำ -->
+<header class="bg-color bg-image mt-5 pt-5"> 
+    <div class="container h-100"> <!-- Set the container to full height -->
+        <div class="row h-100 justify-content-center align-items-center"> <!-- Center the content -->
+            <div class="col-lg-10 text-center "> <!-- Center text -->
+                <h1 class="display-4 fst-italic">Thanaphat<span class="highlight"> Thongburee</span></h1>
+                <p class="lead my-3">This portfolio is proposed about history of my personality,
+                    knowledge, graduation, ability including my development
+                    and activities. It is proud to me of my success and some
+                    evidence of example such as pictures and activities shown
+                    in this portfolio. I hope my portfolio can present my ability
+                    informatively and person who read my portfolio could
+                    understand my ability definitely. If this portfolio may have
+                    to get corrected or improved, pls advise.</p>
+                <p class="lead mb-0"><a class="btn btn-outline-success btn-big" href="about-me.html" type="submit">Read More</a></p>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- บทนำ -->
+<!-- footer -->
+<footer class="text-body-secondary py-5 bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 text-white">
+                <h5>ติดต่อ<span class="highlight">เรา</span></h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <i class="bi bi-envelope-fill footer-icon"></i>
+                        Email: <a href="mailto:thanaphatxeducate@gmail.com" class="text-white">thanaphatxeducate@gmail.com</a>
+                    </li>
+                    <li>
+                        <i class="bi bi-telephone-fill footer-icon"></i>
+                        Phone: <a href="tel:+66634834531" class="text-white">+66 63 483 4531</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 text-white">
+                <h5>ติดตาม<span class="highlight">เรา</span></h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="https://web.facebook.com/SThanaphat.z" class="text-white">
+                            <i class="bi bi-facebook footer-icon"></i> Facebook
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/tnpgot/" class="text-white">
+                            <i class="bi bi-instagram footer-icon"></i> Instagram
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 text-white d-flex justify-content-end"> <!-- ให้ QR code ติดขวา -->
+                <div class="text-center">
+                    <h6>Gotchan<span class="highlight"> Photographer</span></h6>
+                    <img src="picture/qr-code-removebg.png" alt="QR Code" class="img-fluid qr-code">
+                </div>
+            </div>
+    </div>
+</footer>
+<!-- Icons --> 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+<!-- footer -->
+
+
+
+</body>
+</html>

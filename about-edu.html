@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<style>
+    .navbar-custom {
+        font-family: "Kanit", sans-serif;
+        font-size: 18px; /* Font size for the navbar */
+    }
+  
+    .navbar-brand {
+        font-size: 24px; /* Larger font size for the brand */
+    }
+
+    .dropdown-item {
+        font-size: 16px; /* Font size for dropdown items */
+    }
+
+    .list-group-item {
+        border-radius: 10px;
+        margin-bottom: 10px; /* ลดระยะห่างระหว่างรายการ */
+        padding: 10px 15px; /* ลดขนาดของ padding */
+        transition: transform 0.2s;
+        cursor: pointer; /* เปลี่ยนเคอร์เซอร์เมื่ออยู่เหนือรายการ */
+    }
+
+    .list-group-item:hover {
+        transform: scale(1.02);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+        margin-top: 1px;
+        margin-bottom: 40px;
+        font-size: 70px;
+        font-weight: bold;
+        font-family: 'Kanit', sans-serif;
+        color: white;
+    }
+
+    small {
+        color: #6c757d; /* สีเทาอ่อน */
+    }
+
+    .bg-image {
+        position: relative; /* ตั้งตำแหน่งให้เป็น relative */
+        height: auto; /* ให้สูงเท่ากับความสูงของ viewport */
+        color: rgb(0, 0, 0); /* เปลี่ยนสีฟอนต์ให้เป็นสีขาว */
+        overflow: hidden; /* ป้องกันไม่ให้ overflow */
+    }
+
+    .bg-image::before {
+        content: ""; /* สร้างเนื้อหาเป็นสตริงว่าง */
+        position: absolute; /* ตั้งตำแหน่งเป็น absolute */
+        top: 0; /* ให้เริ่มจากด้านบน */
+        left: 0; /* ให้เริ่มจากด้านซ้าย */
+        right: 0; /* ให้ถึงด้านขวา */
+        bottom: 0; /* ให้ถึงด้านล่าง */
+        background-image: url('picture/bg-education-2.jpg'); /* ใส่ที่อยู่ของภาพที่นี่ */
+        background-size: cover; /* ทำให้ภาพเต็มพื้นที่ */
+        background-position: center; /* จัดตำแหน่งภาพให้อยู่กลาง */
+        opacity: 0.9; /* ตั้งค่า opacity ที่ต้องการ */
+        z-index: -1; /* ทำให้พื้นหลังอยู่ด้านหลังเนื้อหา */
+    }
+
+    body {
+        font-family: 'Kanit', sans-serif;
+    }
+
+    .modal-lg {
+        max-width: 70%; /* กำหนดความกว้างสูงสุดเป็น 80% ของหน้าจอ */
+        width: auto; /* กำหนดให้มีความกว้างอัตโนมัติ */
+    }
+
+    .custom-image {
+        max-width: 135px; /* จำกัดความกว้างสูงสุด */
+        height: auto;
+        margin-left: 10px; /* เพิ่มระยะห่างระหว่างรูปภาพกับเนื้อหา */
+    }
+
+    @media (min-width: 768px) {
+        .custom-image {
+        width: 200px; /* ขยายความกว้างเมื่อหน้าจอกว้างขึ้น */
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .custom-image {
+        width: 500px; /* ขยายความกว้างอีกเมื่อหน้าจอกว้างมากขึ้น */
+        }
+    }
+        
+    p {
+        font-size: 20px;
+    }
+
+    h5 {
+        font-size: 30px;
+    }
+
+    small {
+        font-size: 20px;
+    }
+    .highlight {
+        color:  #2f8d3a; /* เปลี่ยนเป็นสีที่ต้องการ */
+    }
+</style>
+<title>Education</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Portfolio.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">About</button>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="about-me.html">ข้อมูลส่วนตัว</a></li>
+                            <li><a class="dropdown-item" href="about-edu.html">ประวัติการศึกษา</a></li>
+                            <li><a class="dropdown-item" href="about-knowhow.html">ความรู้ ความสามารถ</a></li>
+                            <li><a class="dropdown-item" href="about-activities.html">กิจกรรม</a></li>
+                            <li><a class="dropdown-item" href="about-skill.html">ทักษะ</a></li>
+                            <li><a class="dropdown-item" href="about-college.html">แผนก/วิชาการ</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="ms-auto">
+                    <a class="btn btn-outline-success" href="regis.php" role="button">สมัครสมาชิก</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar -->
+    <!-- Education -->
+    <header class="bg-color bg-image mt-5 pt-5"> <!-- เพิ่ม mt-5 และ pt-5 -->
+    <div class="container">
+    <div class="container mt-4 pt-2 bg-imge" >
+        <h1 class="text-center">ประวัติ<span class="highlight">การศึกษา</span></h1>
+        <div class="list-group mt-4">
+            <div class="list-group-item bg-light" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setImage('picture/img-6.jpg')">
+                <h5 class="mb-1">ประถมศึกษา</h5>
+                <p class="mb-1">โรงเรียนกฤษณาวิทยา</p>
+                <small>เกรดเฉลี่ย: 3.20</small>
+                <div class="float-end">
+                    <img src="picture/logo-edu-1.jpg" alt="Logo" class="custom-image">
+                </div>
+            </div>
+            <div class="list-group-item bg-light" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setImage('picture/img-ed-1.JPG')">
+                <h5 class="mb-1">มัธยมศึกษาตอนต้น</h5>
+                <p class="mb-1">โรงเรียนสะเดา "ขรรค์ชัยกัมพลานนท์อนุสรณ์"</p>
+                <small>เกรดเฉลี่ย: 3.10</small>
+                <div class="float-end">
+                    <img src="picture/logo-edu-2.jpg" alt="Logo" class="custom-image">
+                </div>
+            </div>
+            <div class="list-group-item bg-light" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setImage('picture/img-ed-2.PNG')">
+                <h5 class="mb-1">มัธยมศึกษาตอนปลาย</h5>
+                <p class="mb-1">โรงเรียนสะเดา "ขรรค์ชัยกัมพลานนท์อนุสรณ์"</p>
+                <small>เกรดเฉลี่ย: 3.10</small>
+                <div class="float-end">
+                    <img src="picture/logo-edu-2.jpg" alt="Logo" class="custom-image">
+                </div>
+            </div>
+            <div class="list-group-item bg-light" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setImage('picture/img-ed-3.jpg')">
+                <h5 class="mb-1">ประกาศนียบัตรชั้นสูง</h5>
+                <p class="mb-1">วิทยาลัยเทคนิคภูเก็ต</p>
+                <small>เกรดเฉลี่ย: -</small>
+                <div class="float-end">
+                    <img src="picture/logo-edu-3.jpg" alt="Logo" class="custom-image">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Education -->
+    <!-- Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg"> <!-- ใช้ modal-lg เพื่อให้ใหญ่ขึ้น -->
+            <div class="modal-content">
+             <div class="modal-header">
+                <h5 class="modal-title" id="imageModalLabel">รูปภาพการศึกษา</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img id="modalImage" class="img-fluid" src="" alt="รูปภาพการศึกษา">
+            </div>
+            </div>
+        </div>
+    </div>  
+    <!-- Modal -->
+      <script>
+        function setImage(imageUrl) {
+            const imgElement = document.getElementById('modalImage');
+            imgElement.src = imageUrl; // ตั้งค่า src ของรูปภาพ
+        }
+      </script>
+</body>
+</html>
